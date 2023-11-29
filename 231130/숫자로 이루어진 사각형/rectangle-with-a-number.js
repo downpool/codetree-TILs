@@ -1,4 +1,4 @@
-let input = require('fs').readFileSync('/dev/stdin').toString().trim().split('').map(Number);
+let input = require('fs').readFileSync('/dev/stdin').toString().trim();
 
 // let dx = [1, 0, -1, 0];
 // let dy = [0, -1, 0, 1];
@@ -18,8 +18,8 @@ function printNum(n) {
                 cnt = 1;
             }
         }
-        console.log('');
+        process.stdout.write("\n");
     }
 }
 
-printNum(input[0]);
+printNum(Number(input));
