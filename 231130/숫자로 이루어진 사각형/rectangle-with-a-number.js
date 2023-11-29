@@ -22,4 +22,4 @@ function printNum(n) {
     }
 }
 
-printNum(input);
+printNum(input[0]);
