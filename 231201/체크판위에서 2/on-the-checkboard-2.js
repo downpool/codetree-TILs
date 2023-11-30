@@ -6,6 +6,7 @@ for(let i = 1; i < input.length; i++){
     array[i - 1] = input[i].split(' ');
 }
 let start = array[0][0];
+
 let max = Number.MIN_SAFE_INTEGER;
 for(let i = 1; i < RandC[0] - 1; i++){
     for(let j = 1; j < RandC[1] - 1; j++){
@@ -14,4 +15,8 @@ for(let i = 1; i < RandC[0] - 1; i++){
         }
     }
 }
-console.log(max);
+if (start == array[RandC[0] - 1][RandC[1] - 1]){
+    console.log(0);
+}else{
+    console.log(max);
+}
