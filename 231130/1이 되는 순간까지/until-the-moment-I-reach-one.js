@@ -7,7 +7,7 @@ function divide(n) {
     if (n % 2 == 0){
         return divide(n / 2) + 1;
     }else {
-        return divide(Math.round(n / 3)) + 1;
+        return divide(parseInt(n / 3)) + 1;
     }
 }
 
