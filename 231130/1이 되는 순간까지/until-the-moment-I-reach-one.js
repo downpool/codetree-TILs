@@ -3,7 +3,7 @@ let input = Number(require('fs').readFileSync('/dev/stdin').toString().trim());
 let count = 0;
 function divide(n) {
     if (n == 1) {
-        return 1;
+        return 0;
     }
     count++;
     if (n % 2 == 0){
