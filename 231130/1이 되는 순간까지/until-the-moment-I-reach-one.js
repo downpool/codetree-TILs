@@ -1,17 +1,14 @@
 let input = Number(require('fs').readFileSync('/dev/stdin').toString().trim());
 
-let count = 0;
 function divide(n) {
     if (n == 1) {
         return 0;
     }
-    count++;
     if (n % 2 == 0){
-        divide(n /= 2);
+        return divide(n / 2) + 1;
     }else {
-        divide(Math.round(n / 3));
+        return divide(Math.round(n / 3)) + 1;
     }
 }
 
-divide(input);
-console.log(count);
+console.log(divide(input));
