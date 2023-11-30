@@ -1,5 +1,15 @@
-let input = Number(require('fs').readFileSync('/dev/stdin').toString().trim());
+let input = require('fs').readFileSync('/dev/stdin').toString().trim().split('');
 
-let num = input.toString(2);
+let isConvert = false;
+for(let i = 0; i < input.length; i++){
+    if (input[i] == 0) {
+        input[i] = 1;
+        isConvert = true;
+        break;
+    }
+}
+if (!isConvert){
+    input[input.length - 1] = input[input.length - 1] == 0 ? 1 : 0;
+}
 
-console.log(num);
+console.log(Number.parseInt(input.join(''), 2));
