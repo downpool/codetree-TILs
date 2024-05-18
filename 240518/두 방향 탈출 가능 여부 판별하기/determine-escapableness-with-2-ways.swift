@@ -2,7 +2,7 @@ import Foundation
 
 let nm = readLine()!.split(separator: " ").map({Int($0)!})
 
-var graph = [[Int]](repeating: [Int](repeating: 0, count: nm[0]), count: nm[1])
+var graph = [[Int]](repeating: [Int](repeating: 0, count: nm[1]), count: nm[0])
 
 for i in 0 ..< nm[0] {
     let line = readLine()!.split(separator: " ").map({Int($0)!})
@@ -23,9 +23,9 @@ func dfs(_ x: Int, _ y: Int) {
         return
     }
 
-    if x == nm[1] - 1 {
+    if x == nm[0] - 1 {
         dfs(x, y + 1)
-    }else if y == nm[0] - 1 {
+    }else if y == nm[1] - 1 {
         dfs(x + 1, y)
     }else{
         dfs(x, y + 1)
