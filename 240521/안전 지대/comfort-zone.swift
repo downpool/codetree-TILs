@@ -36,8 +36,11 @@ for k in 1 ..< 100 {
     }
     maxss.append(count)
 }
-
-print((maxss.firstIndex(of: maxss.max()!)! + 1), maxss.max()!)
+if maxss.isEmpty {
+    print("1 0")
+}else{
+    print((maxss.firstIndex(of: maxss.max()!)! + 1), maxss.max()!)
+}
 
 func dfs(_ x: Int, _ y: Int, _ graphs: inout [[Int]]) {
     if x < 0 || x >= nm[0] || y < 0 || y >= nm[1] || graphs[x][y] == 0 {
