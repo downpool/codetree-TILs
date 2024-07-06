@@ -38,7 +38,7 @@ for i in 1 ... nm[0] {
 }
 
 for i in 2 ... nm[0] {
-    if dist[nm[0]] == INF {
+    if dist[i] == INF {
         print(-1)
     }else{
         print(dist[i])
