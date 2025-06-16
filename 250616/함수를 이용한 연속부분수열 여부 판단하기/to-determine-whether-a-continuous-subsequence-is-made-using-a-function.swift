@@ -14,7 +14,7 @@ func isRight(_ nums1: [Int], _ nums2: [Int]) -> Bool {
     if nums1.count < nums2.count {
         return false
     }
-    for i in 0 ..< nums1.count - nums2.count {
+    for i in 0 ... nums1.count - nums2.count {
         if nums1[i] == nums2[0] {
             var temp = i
             var ans = true
