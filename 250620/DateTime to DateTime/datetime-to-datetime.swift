@@ -8,4 +8,4 @@ let c = numbers[2]
 
 // Please write your code here.
 var d = a * 24 * 60 + b * 60 + c - 11 * 24 * 60 - 11 * 60 - 11
-print(d)
+print(d < 0 ? -1 : d)
