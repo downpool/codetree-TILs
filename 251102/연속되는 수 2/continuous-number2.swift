@@ -9,7 +9,7 @@ for _ in 0..<n {
 // Please write your code here.
 
 var cnt = 1;
-var max = 0;
+var max = 1;
 for i in 1 ..< n {
     if(numbers[i] == numbers[i - 1]) {
         cnt += 1
@@ -19,4 +19,4 @@ for i in 1 ..< n {
     }
 }
 
-print(max)
+print(max < cnt ? cnt : max)
