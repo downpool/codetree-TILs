@@ -8,11 +8,15 @@ for _ in 0..<n {
 
 // Please write your code here.
 
-var cnt = 0;
-for i in 0 ..< n {
-    if(i == 0 || numbers[i] != numbers[i - 1]){
+var cnt = 1;
+var max = 0;
+for i in 1 ..< n {
+    if(numbers[i] == numbers[i - 1]) {
         cnt += 1
+    }else{
+        max = max < cnt ? cnt : max
+        cnt = 1
     }
 }
 
-print(cnt)
+print(max)
