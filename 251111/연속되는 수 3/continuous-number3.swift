@@ -8,7 +8,7 @@ for _ in 0..<n {
 
 // Please write your code here.
 var cnt: Int = 1
-var max: Int = 0
+var max: Int = 1
 var isPlus: Bool = numbers[0] >= 0 ? true : false
 
 for i in 1 ..< numbers.count {
@@ -19,7 +19,7 @@ for i in 1 ..< numbers.count {
         cnt = 1
     }
 
-    max = max < cnt ? cnt : max
+    max = max <= cnt ? cnt : max
 }
 
 print(max)
