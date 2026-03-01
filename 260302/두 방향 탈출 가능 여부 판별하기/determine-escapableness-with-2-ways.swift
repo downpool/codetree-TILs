@@ -11,10 +11,10 @@ for _ in 0..<n {
 // Please write your code here.
 var ans: Int = 0
 func dfs(_ x: Int, _ y: Int) {
-    if x >= m || y >= n || x < 0 || y < 0 || grid[x][y] != 1 {
+    if x >= n || y >= m || x < 0 || y < 0 || grid[x][y] != 1 {
         return
     }
-    if x == (m - 1) && y == (n - 1) {
+    if x == (n - 1) && y == (m - 1) {
         ans = 1
         return
     } 
